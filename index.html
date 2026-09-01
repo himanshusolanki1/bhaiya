@@ -44,9 +44,8 @@ src="https://www.facebook.com/tr?id=1615689516872673&ev=PageView&noscript=1"
       color: #fff;
       position: relative;
       background:
-        radial-gradient(circle at 15% 12%, rgba(24,181,255,.28), transparent 31%),
-        radial-gradient(circle at 86% 88%, rgba(78,74,255,.25), transparent 32%),
-        linear-gradient(145deg,#07111f 0%,#0b192a 48%,#102a48 100%);
+        radial-gradient(circle at 50% 18%, rgba(16,148,220,.12), transparent 34%),
+        linear-gradient(180deg, #02070c 0%, #050d14 48%, #07131d 100%);
     }
 
     body::before,
@@ -79,26 +78,26 @@ src="https://www.facebook.com/tr?id=1615689516872673&ev=PageView&noscript=1"
       position: relative;
       z-index: 2;
       width: min(100%, 440px);
-      max-height: calc(100dvh - 28px);
-      padding: clamp(20px, 4vh, 32px) clamp(18px, 5vw, 26px);
+      max-height: calc(100dvh - 18px);
+      padding: clamp(12px, 2.6vh, 24px) clamp(16px, 4vw, 22px);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      border-radius: 30px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.075);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      box-shadow:
-        0 26px 70px rgba(0,0,0,.38),
-        inset 0 1px 0 rgba(255,255,255,.08);
+
+      /* Full-page layout: no surrounding card/box */
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      box-shadow: none;
     }
 
     .avatar-wrap {
-      width: clamp(78px, 13vh, 100px);
-      height: clamp(78px, 13vh, 100px);
+      width: clamp(102px, 16vh, 132px);
+      height: clamp(102px, 16vh, 132px);
       border-radius: 20px;
       padding: 4px;
       position: relative;
@@ -120,13 +119,11 @@ src="https://www.facebook.com/tr?id=1615689516872673&ev=PageView&noscript=1"
     .avatar {
       width: 100%;
       height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
       border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(145deg,#162e4a,#08121e);
-      font-size: clamp(30px, 5vh, 40px);
-      font-weight: 900;
+      background: #0b1726;
     }
 
     .accent {
@@ -309,7 +306,7 @@ src="https://www.facebook.com/tr?id=1615689516872673&ev=PageView&noscript=1"
     /* Keep everything visible on short phones without scrolling */
     @media (max-height: 720px) {
       .card { padding: 15px 17px; }
-      .avatar-wrap { width: 68px; height: 68px; margin-bottom: 8px; }
+      .avatar-wrap { width: 88px; height: 88px; margin-bottom: 8px; }
       .accent { margin-bottom: 9px; }
       h1 { font-size: 22px; margin-bottom: 6px; }
       .subtitle { font-size: 11.5px; line-height: 1.35; margin-bottom: 8px; }
